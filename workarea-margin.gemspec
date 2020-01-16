@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.version     = Workarea::Margin::VERSION
   spec.authors     = ["Brandon Goodman"]
   spec.email       = ["brandongoodman615@gmail.com"]
-  spec.homepage    = "TODO"
+  spec.homepage    = "https://github.com/Brandongoodman615/workarea-margin"
   spec.summary     = "Margin plugin for the Workarea ecommerce platform"
   spec.description = "Plugin for cost and margin in admin pricing list on the Workarea ecommerce platform"
   spec.license     = "Business Software License"
