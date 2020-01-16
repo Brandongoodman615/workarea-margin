@@ -1,0 +1,9 @@
+module Workarea
+  module Pricing
+    decorate Price, with: :margin do
+      decorated do
+        field :cost, type: Money, default: 0
+      end
+    end
+  end
+end
