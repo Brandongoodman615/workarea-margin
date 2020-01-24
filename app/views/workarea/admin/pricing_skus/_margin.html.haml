@@ -1,0 +1,6 @@
+- if result.cost == 0
+  %td.align-center= '-'
+  %td.align-center= '-'
+- else 
+  %td.align-center= number_to_currency result.cost
+  %td.align-center= number_to_percentage result.margin, precision: 2
