@@ -1,0 +1,4 @@
+.property
+  = label_tag 'sku_cost', "Cost", class: 'property__name'
+  = currency_symbol
+  = text_field_tag 'sku[cost]', @sku.cost, class: 'text-box text-box--small'

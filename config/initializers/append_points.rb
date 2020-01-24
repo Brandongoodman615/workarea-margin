@@ -8,4 +8,9 @@ module Workarea
     'admin.margin',
     'workarea/admin/pricing_skus/margin'
   )
+
+  Workarea.append_partials(
+    'admin.add_margin',
+    'workarea/admin/pricing_skus/add_margin'
+  )
 end
