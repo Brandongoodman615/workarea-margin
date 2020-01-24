@@ -1,25 +1,39 @@
-Workarea Margin
-================================================================================
-Margin plugin for the Workarea platform.
-Overview
---------------------------------------------------------------------------------
-1. TODO
-Getting Started
---------------------------------------------------------------------------------
-This gem contains a Rails engine that must be mounted onto a host Rails application.
-Then add the gem to your application's Gemfile specifying the source:
-    # ...
-    gem 'workarea-margin'
-    # ...
+# Workarea Margin
+
+Currently in Development.
+
+A Workarea Commerce plugin that enables product reviews.
+
+## Overview
+
+- Allows adding cost to pricing skus
+- Pricing admin view will show margin based on regular price or sale price depending on the sale flag
+
+## Getting Started
+
+While in Development use the Github path in your Gemfile:
+
+```ruby
+gem 'workarea-margin', git: 'https://github.com/Brandongoodman615/workarea-margin'
+```
+
+Add the gem to your application's Gemfile:
+
+```ruby
+gem 'workarea-margin'
+```
+
 Update your application's bundle.
-    cd path/to/application
-    bundle
-Features
---------------------------------------------------------------------------------
-### TODO
-Workarea Platform Documentation
---------------------------------------------------------------------------------
-See [https://developer.workarea.com](https://developer.workarea.com) for Workarea platform documentation.
-License
---------------------------------------------------------------------------------
-Workarea Margin is released under the [Business Software License](LICENSE)
+
+```bash
+cd path/to/application
+bundle
+```
+
+## Workarea Commerce Documentation
+
+See [https://developer.workarea.com](https://developer.workarea.com) for Workarea Commerce documentation.
+
+## License
+
+Workarea Reviews is released under the [Business Software License](LICENSE)
