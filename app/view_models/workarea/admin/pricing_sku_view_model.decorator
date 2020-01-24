@@ -1,0 +1,13 @@
+module Workarea
+  module Admin
+    decorate PricingSkuViewModel, with: :my_store do
+      def margin
+        if on_sale == false
+          ((regular_price - cost) / regular_price) * 100
+        else
+          ((sale_price - cost) / sale_price) * 100
+        end
+      end
+    end
+  end
+end
