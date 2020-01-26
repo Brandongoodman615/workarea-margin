@@ -36,7 +36,7 @@ Append partials need to be added to your platform to work:
 
 These append points can be added between any column on the pricing table, they will be in order of cost then margin. The default location is before MSRP, but it could go after and make sense as well.
 
-```ruby
+```haml
 admin/app/views/workarea/admin/pricing_skus/index.html.haml
 
 - if @search.results.any?
@@ -74,7 +74,7 @@ admin/app/views/workarea/admin/pricing_skus/index.html.haml
               %td= local_time_ago(result.updated_at)
 ```
 
-```ruby
+```haml
 admin/app/views/workarea/admin/pricing_skus/new.html.haml
 
 .property
@@ -89,7 +89,7 @@ admin/app/views/workarea/admin/pricing_skus/new.html.haml
   = text_field_tag 'sku[msrp]', @sku.msrp, class: 'text-box text-box--small', placeholder: t('workarea.admin.pricing_skus.msrp_placeholder')
 ```
 
-```ruby
+```haml
 admin/app/views/workarea/admin/pricing_skus/edit.html.haml
 
 .property
@@ -102,6 +102,32 @@ admin/app/views/workarea/admin/pricing_skus/edit.html.haml
   = label_tag 'sku_msrp', t('workarea.admin.fields.msrp'), class: 'property__name'
   = currency_symbol
   = text_field_tag 'sku[msrp]', @sku.msrp, class: 'text-box text-box--small'
+```
+
+```haml
+admin/app/views/workarea/admin/pricing_skus/_cards.html.haml
+
+.card__body
+          %ul.list-reset
+            %li
+              %strong #{t('workarea.admin.fields.active')}?
+              = check_box_tag 'sku', 'active', model.active, disabled: true
+            %li
+              %strong #{t('workarea.admin.fields.tax_code')}:
+              = model.tax_code.presence || '(none)'
+            = append_partials('admin.card_cost_and_margin', model: model)
+            %li
+              %strong #{t('workarea.admin.fields.msrp')}:
+              - if model.msrp.blank?
+                = t('workarea.admin.cards.attributes.no_value')
+              - else
+                = number_to_currency model.msrp
+            %li
+              %strong #{t('workarea.admin.fields.on_sale')}:
+              = model.on_sale?.to_s.titleize
+            %li
+              %strong #{t('workarea.admin.fields.discountable')}:
+              = model.discountable?.to_s.titleize
 ```
 
 ## Workarea Commerce Documentation
