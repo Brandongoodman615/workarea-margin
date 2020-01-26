@@ -1,12 +1,18 @@
 module Workarea
   module Admin
-    decorate PricingSkuViewModel, with: :my_store do
+    decorate PricingSkuViewModel, with: :margin do
+      def show_cost
+        return if cost == 0
+        cost
+      end
+
       def margin
-        if on_sale == false
-          ((regular_price - cost) / regular_price) * 100
-        else
-          ((sale_price - cost) / sale_price) * 100
-        end
+        return if cost == 0
+        on_sale ? find_margin(sale_price) : find_margin(regular_price)
+      end
+
+      def find_margin(price)
+        ((price - cost) / price) * 100
       end
     end
   end

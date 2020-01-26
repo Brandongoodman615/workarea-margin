@@ -1,6 +1,6 @@
 module Workarea
   module Pricing
-    decorate Sku, with: :my_store do
+    decorate Sku, with: :margin do
       decorated do
         field :cost, type: Money, default: 0
       end

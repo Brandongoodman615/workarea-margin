@@ -34,6 +34,8 @@ bundle
 
 Append partials need to be added to your platform to work:
 
+These append points can be added between any column on the pricing table, they will be in order of cost then margin. The default location is before MSRP, but it could go after and make sense as well.
+
 ```ruby
 admin/app/views/workarea/admin/pricing_skus/index.html.haml
 
@@ -46,7 +48,7 @@ admin/app/views/workarea/admin/pricing_skus/index.html.haml
                 = check_box_tag 'select_all', nil, false, id: 'select_all', class: 'checkbox__input', data: { bulk_action_select_all: '' }
                 = label_tag 'select_all', t('workarea.admin.bulk_actions.select_all'), class: 'checkbox__label'
             %th= t('workarea.admin.fields.sku')
-            = append_partials('admin.margin_labels')
+            = append_partials('admin.cost_and_margin_labels') # <---- Labels
             %th.align-right= t('workarea.admin.fields.msrp')
             %th.align-right= t('workarea.admin.fields.regular')
             %th.align-right= t('workarea.admin.fields.sale_price')
@@ -63,7 +65,7 @@ admin/app/views/workarea/admin/pricing_skus/index.html.haml
               %td
                 = link_to result.id, pricing_sku_path(result)
                 = upcoming_changesets_icon_for(result)
-              = append_partials('admin.margin', result: result)
+              = append_partials('admin.cost_and_margin', result: result) # <---- Data
               %td.align-right= number_to_currency result.msrp
               %td.align-right= number_to_currency result.regular_price
               %td.align-right= number_to_currency result.sale_price
@@ -79,7 +81,7 @@ admin/app/views/workarea/admin/pricing_skus/new.html.haml
   %span.property__name= t('workarea.admin.fields.discountable')
   = toggle_button_for 'sku[discountable]', @sku.discountable?, title_true: t('workarea.admin.pricing_skus.allow_discounting'), title_false: t('workarea.admin.pricing_skus.disallow_discounting')
 
-= append_partials('admin.add_margin', sku: @sku)
+= append_partials('admin.add_cost', sku: @sku)
 
 .property
   = label_tag 'sku_msrp', t('workarea.admin.fields.msrp'), class: 'property__name'
@@ -94,7 +96,7 @@ admin/app/views/workarea/admin/pricing_skus/edit.html.haml
   = label_tag 'sku[tax_code]', t('workarea.admin.fields.tax_code'), class: 'property__name'
   = text_field_tag 'sku[tax_code]', @sku.tax_code, class: 'text-box'
 
-= append_partials('admin.add_margin', sku: @sku)
+= append_partials('admin.add_cost', sku: @sku)
 
 .property
   = label_tag 'sku_msrp', t('workarea.admin.fields.msrp'), class: 'property__name'
