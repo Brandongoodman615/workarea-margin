@@ -1,16 +1,16 @@
 module Workarea
   Workarea.append_partials(
-    'admin.margin_labels',
-    'workarea/admin/pricing_skus/margin_labels'
+    'admin.cost_and_margin_labels',
+    'workarea/admin/pricing_skus/cost_and_margin_labels'
   )
 
   Workarea.append_partials(
-    'admin.margin',
-    'workarea/admin/pricing_skus/margin'
+    'admin.cost_and_margin',
+    'workarea/admin/pricing_skus/cost_and_margin'
   )
 
   Workarea.append_partials(
-    'admin.add_margin',
-    'workarea/admin/pricing_skus/add_margin'
+    'admin.add_cost',
+    'workarea/admin/pricing_skus/add_cost'
   )
 end
