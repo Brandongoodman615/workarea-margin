@@ -1,0 +1,12 @@
+%li
+  %strong #{t('workarea.admin.fields.cost')}:
+  - if model.cost.blank?
+    = t('workarea.admin.cards.attributes.no_value')
+  - else
+    = number_to_currency model.cost
+%li
+  %strong #{t('workarea.admin.fields.margin')}:
+  - if model.cost.blank?
+    = t('workarea.admin.cards.attributes.no_value')
+  - else
+    = number_to_percentage model.margin, precision: 2
