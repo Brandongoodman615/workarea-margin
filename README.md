@@ -81,7 +81,7 @@ admin/app/views/workarea/admin/pricing_skus/new.html.haml
   %span.property__name= t('workarea.admin.fields.discountable')
   = toggle_button_for 'sku[discountable]', @sku.discountable?, title_true: t('workarea.admin.pricing_skus.allow_discounting'), title_false: t('workarea.admin.pricing_skus.disallow_discounting')
 
-= append_partials('admin.add_cost', sku: @sku)
+= append_partials('admin.add_cost', sku: @sku) # <---- Add Cost Box
 
 .property
   = label_tag 'sku_msrp', t('workarea.admin.fields.msrp'), class: 'property__name'
@@ -96,7 +96,7 @@ admin/app/views/workarea/admin/pricing_skus/edit.html.haml
   = label_tag 'sku[tax_code]', t('workarea.admin.fields.tax_code'), class: 'property__name'
   = text_field_tag 'sku[tax_code]', @sku.tax_code, class: 'text-box'
 
-= append_partials('admin.add_cost', sku: @sku)
+= append_partials('admin.add_cost', sku: @sku) # <---- Add Cost Box
 
 .property
   = label_tag 'sku_msrp', t('workarea.admin.fields.msrp'), class: 'property__name'
@@ -115,7 +115,7 @@ admin/app/views/workarea/admin/pricing_skus/_cards.html.haml
             %li
               %strong #{t('workarea.admin.fields.tax_code')}:
               = model.tax_code.presence || '(none)'
-            = append_partials('admin.card_cost_and_margin', model: model)
+            = append_partials('admin.card_cost_and_margin', model: model) # <---- Card Data
             %li
               %strong #{t('workarea.admin.fields.msrp')}:
               - if model.msrp.blank?
