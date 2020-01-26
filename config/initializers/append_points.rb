@@ -13,4 +13,9 @@ module Workarea
     'admin.add_cost',
     'workarea/admin/pricing_skus/add_cost'
   )
+
+  Workarea.append_partials(
+    'admin.card_cost_and_margin',
+    'workarea/admin/pricing_skus/card_cost_and_margin'
+  )
 end
