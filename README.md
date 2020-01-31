@@ -52,7 +52,7 @@ admin/app/views/workarea/admin/pricing_skus/index.html.haml
                 = check_box_tag 'select_all', nil, false, id: 'select_all', class: 'checkbox__input', data: { bulk_action_select_all: '' }
                 = label_tag 'select_all', t('workarea.admin.bulk_actions.select_all'), class: 'checkbox__label'
             %th= t('workarea.admin.fields.sku')
-            = append_partials('admin.cost_and_margin_labels') # <---- Labels
+            = append_partials('admin.additional_fields_labels') # <---- Labels
             %th.align-right= t('workarea.admin.fields.msrp')
             %th.align-right= t('workarea.admin.fields.regular')
             %th.align-right= t('workarea.admin.fields.sale_price')
@@ -69,7 +69,7 @@ admin/app/views/workarea/admin/pricing_skus/index.html.haml
               %td
                 = link_to result.id, pricing_sku_path(result)
                 = upcoming_changesets_icon_for(result)
-              = append_partials('admin.cost_and_margin', result: result) # <---- Data
+              = append_partials('admin.additional_fields', result: result) # <---- Data
               %td.align-right= number_to_currency result.msrp
               %td.align-right= number_to_currency result.regular_price
               %td.align-right= number_to_currency result.sale_price
