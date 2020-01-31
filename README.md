@@ -9,12 +9,9 @@ A Workarea Commerce plugin that enables product reviews.
 - Allows adding cost to pricing skus
 - Pricing admin view will show margin based on regular price or sale price depending on the sale flag
 
-![GitHub Logo](/images/add_cost.png)
-Format: ![Add Cost Preview](url)
-
-![GitHub Logo](/images/pricing_list.png)
-Format: ![Pricing List Preview](/images/pricing_list.png)
 ![Pricing List Preview](app/assets/images/pricing_list.png)
+
+![Add Cost Preview](app/assets/images/add_cost.png)
 
 ## Getting Started
 
