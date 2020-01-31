@@ -14,6 +14,7 @@ Format: ![Add Cost Preview](url)
 
 ![GitHub Logo](/images/pricing_list.png)
 Format: ![Pricing List Preview](/images/pricing_list.png)
+![Pricing List Preview](app/assets/images/pricing_list.png)
 
 ## Getting Started
 
