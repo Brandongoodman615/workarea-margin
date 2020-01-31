@@ -13,7 +13,7 @@ A Workarea Commerce plugin that enables product reviews.
 Format: ![Add Cost Preview](url)
 
 ![GitHub Logo](/images/pricing_list.png)
-Format: ![Pricing List Preview](url)
+Format: ![Pricing List Preview](/images/pricing_list.png)
 
 ## Getting Started
 
