@@ -1,12 +1,12 @@
 module Workarea
   Workarea.append_partials(
-    'admin.cost_and_margin_labels',
-    'workarea/admin/pricing_skus/cost_and_margin_labels'
+    'admin.pricing_sku_additional_fields_labels',
+    'workarea/admin/pricing_skus/pricing_sku_additional_fields_labels'
   )
 
   Workarea.append_partials(
-    'admin.cost_and_margin',
-    'workarea/admin/pricing_skus/cost_and_margin'
+    'admin.additional_fields',
+    'workarea/admin/pricing_skus/additional_fields'
   )
 
   Workarea.append_partials(
