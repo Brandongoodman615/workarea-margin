@@ -15,16 +15,10 @@ A Workarea Commerce plugin that enables product reviews.
 
 ## Getting Started
 
-While in Development use the Github path in your Gemfile:
-
-```ruby
-gem 'workarea-margin', git: 'https://github.com/Brandongoodman615/workarea-margin'
-```
-
 Add the gem to your application's Gemfile:
 
 ```ruby
-gem 'workarea-margin'
+gem 'workarea-margin', '~> 1.0.0.pre'
 ```
 
 Update your application's bundle.
