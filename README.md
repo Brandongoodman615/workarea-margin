@@ -15,7 +15,7 @@ Add the gem to your application's Gemfile:
 
 ```ruby
 # ...
-gem 'workarea-margin'
+gem 'workarea-margin', '~> 1.0.0.pre'
 # ...
 ```
 
