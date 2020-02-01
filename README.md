@@ -9,22 +9,14 @@ A Workarea Commerce plugin that enables product reviews.
 - Allows adding cost to pricing skus
 - Pricing admin view will show margin based on regular price or sale price depending on the sale flag
 
-![Pricing List Preview](app/assets/images/pricing_list.png)
-
-![Add Cost Preview](app/assets/images/add_cost.png)
-
 ## Getting Started
-
-While in Development use the Github path in your Gemfile:
-
-```ruby
-gem 'workarea-margin', git: 'https://github.com/Brandongoodman615/workarea-margin'
-```
 
 Add the gem to your application's Gemfile:
 
 ```ruby
+# ...
 gem 'workarea-margin'
+# ...
 ```
 
 Update your application's bundle.
@@ -33,6 +25,12 @@ Update your application's bundle.
 cd path/to/application
 bundle
 ```
+
+## Screenshots
+
+![Pricing List Preview](app/assets/images/pricing_list.png)
+
+![Add Cost Preview](app/assets/images/add_cost.png)
 
 ## Append Points
 
