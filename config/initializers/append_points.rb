@@ -1,11 +1,11 @@
 module Workarea
   Workarea.append_partials(
-    'admin.additional_fields_labels',
-    'workarea/admin/pricing_skus/additional_fields_labels'
+    'admin.pricing_skus_additional_field_labels',
+    'workarea/admin/pricing_skus/pricing_skus_additional_field_labels'
   )
 
   Workarea.append_partials(
-    'admin.additional_fields',
-    'workarea/admin/pricing_skus/additional_fields'
+    'admin.pricing_skus_additional_fields',
+    'workarea/admin/pricing_skus/pricing_skus_additional_fields'
   )
 end
