@@ -15,7 +15,7 @@ Add the gem to your application's Gemfile:
 
 ```ruby
 # ...
-gem 'workarea-margin', '~> 1.0.0.pre'
+gem 'workarea-margin', git: 'https://github.com/Brandongoodman615/workarea-margin'
 # ...
 ```
 
@@ -44,6 +44,7 @@ This should be updated in the Workarea codebase soon.
 admin/app/views/workarea/admin/pricing_skus/index.html.haml
 
 - if @search.results.any?
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       %table.index-table
         %thead
@@ -134,6 +135,8 @@ admin/app/views/workarea/admin/pricing_skus/_cards.html.haml
               %strong #{t('workarea.admin.fields.discountable')}:
               = model.discountable?.to_s.titleize
 =======
+=======
+>>>>>>> 0d1586ef8ca860e8189e49f41d84ba010adce0ab
   %table.index-table
     %thead
       %tr
@@ -142,7 +145,11 @@ admin/app/views/workarea/admin/pricing_skus/_cards.html.haml
             = check_box_tag 'select_all', nil, false, id: 'select_all', class: 'checkbox__input', data: { bulk_action_select_all: '' }
             = label_tag 'select_all', t('workarea.admin.bulk_actions.select_all'), class: 'checkbox__label'
         %th= t('workarea.admin.fields.sku')
+<<<<<<< HEAD
 **      = append_partials('admin.pricing_skus_additional_field_labels') **LABEL**
+=======
+        = append_partials('admin.pricing_skus_additional_field_labels')
+>>>>>>> 0d1586ef8ca860e8189e49f41d84ba010adce0ab
         %th.align-right= t('workarea.admin.fields.msrp')
         %th.align-right= t('workarea.admin.fields.regular')
         %th.align-right= t('workarea.admin.fields.sale_price')
@@ -159,14 +166,21 @@ admin/app/views/workarea/admin/pricing_skus/_cards.html.haml
           %td
             = link_to result.id, pricing_sku_path(result)
             = upcoming_changesets_icon_for(result)
+<<<<<<< HEAD
 **        = append_partials('admin.pricing_skus_additional_fields', result: result) **FIELD**
+=======
+          = append_partials('admin.pricing_skus_additional_fields', result: result)
+>>>>>>> 0d1586ef8ca860e8189e49f41d84ba010adce0ab
           %td.align-right= number_to_currency result.msrp
           %td.align-right= number_to_currency result.regular_price
           %td.align-right= number_to_currency result.sale_price
           %td.align-center= t("workarea.admin.#{result.on_sale?}")
           %td.align-center= t("workarea.admin.#{result.discountable?}")
           %td= local_time_ago(result.updated_at)
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 0d1586ef8ca860e8189e49f41d84ba010adce0ab
 ```
 
 ## Workarea Commerce Documentation
