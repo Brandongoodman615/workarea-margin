@@ -1,9 +1,5 @@
 # Workarea Margin
 
-Currently in Development.
-
-A Workarea Commerce plugin that enables product reviews.
-
 ## Overview
 
 - Allows adding cost to pricing skus
